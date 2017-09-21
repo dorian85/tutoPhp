@@ -1,3 +1,7 @@
+<?php
+	require_once "model.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -11,17 +15,18 @@
 
 		<div class="wrapper">
 			<div class="articles-list">
+				<?php foreach ($articles as $article) : ?>
 				<article>
-					<h1>Mon premier article</h1>
+					<h1><?php echo $article->getTitle(); ?></h1>
 					<div class="meta-data">
-						<span class="category">Catégorie : catégorie 1</span> -
-						<span class="creation-date">Date : 18/09/2017</span> -
-						<span class="author">Auteur : Dorian</span>
+						<span class="category">Catégorie : <?php echo $article->getCategory(); ?></span> -
+						<span class="creation-date">Date : <?php echo $article->getCreatedAt(); ?></span> -
+						<span class="author">Auteur : <?php echo $article->getAuthor(); ?></span>
 					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ad sit delectus aliquam! Soluta distinctio, nisi ab. Recusandae explicabo, nam et maiores possimus architecto, aliquid, commodi soluta eveniet incidunt provident.</p>
+					<p><?php echo $article->getContent(); ?></p>
 				</article>
+			<?php endforeach; ?>
 			</div>
 		</div>
-		
 	</body>
 </html>
