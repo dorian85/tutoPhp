@@ -1,32 +1,25 @@
 <?php
-	require_once "model.php";
-?>
 
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<title>Tuto Blog</title>
-		<link rel="stylesheet" type="text/css" href="reset.css">
-		<link rel="stylesheet" type="text/css" href="main.css">
-	</head>
+require_once "vendor/autoload.php";
 
-	<body>
+require_once "ArticleRepository.php";
 
-		<div class="wrapper">
-			<div class="articles-list">
-				<?php foreach ($articles as $article) : ?>
-				<article>
-					<h1><?php echo $article->getTitle(); ?></h1>
-					<div class="meta-data">
-						<span class="category">Catégorie : <?php echo $article->getCategory(); ?></span> -
-						<span class="creation-date">Date : <?php echo $article->getCreatedAt(); ?></span> -
-						<span class="author">Auteur : <?php echo $article->getAuthor(); ?></span>
-					</div>
-					<p><?php echo $article->getContent(); ?></p>
-				</article>
-			<?php endforeach; ?>
-			</div>
-		</div>
-	</body>
-</html>
+$articles = (new ArticleRepository())->findAll();
+
+require_once "home.php";
+
+
+/*
+$tab = [
+	["ligne1col1", "ligne1col2"],
+	["ligne2col1", "ligne2col2"],
+	["ligne3col1", "ligne3col2"],
+];
+
+foreach ($tab as $row) {
+	foreach ($row as $column) {
+		echo $column . " ";
+	}
+	echo "<br>";
+}
+*/
