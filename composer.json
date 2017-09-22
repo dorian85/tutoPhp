@@ -1,0 +1,13 @@
+{
+    "name": "dorian85/tutophp",
+    "authors": [
+        {
+            "name": "Dorian Bourgeois",
+            "email": "dorianbourgeois85@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "symfony/var-dumper": "^3.3"
+    }
+}

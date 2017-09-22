@@ -1,5 +1,7 @@
 <?php
 
+require_once "vendor/autoload.php";
+
 require_once "BddHandler.php";
 require_once "Article.php";
 
@@ -20,6 +22,8 @@ foreach ($articlesFromTable as $article) {
 		$article['content']
 	);
 }
+
+dump($articles);
 
 /*
 $tab = [
