@@ -2,28 +2,10 @@
 
 require_once "vendor/autoload.php";
 
-require_once "BddHandler.php";
-require_once "Article.php";
+require_once "ArticleRepository.php";
 
-$bdd = BddHandler::getBdd();
+$articles = (new ArticleRepository())->findAll();
 
-$query = "SELECT * FROM article";
-$result = $bdd->prepare($query);
-$result->execute();
-
-$articlesFromTable = $result->fetchAll();
-$articles = [];
-
-foreach ($articlesFromTable as $article) {
-	$articles[] = new Article(
-		$article['title'],
-		$article['category'],
-		$article['author'],
-		$article['content']
-	);
-}
-
-dump($articles);
 
 /*
 $tab = [
