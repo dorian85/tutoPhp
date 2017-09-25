@@ -1,7 +1,7 @@
 <?php
 
-require_once "BddHandler.php";
-require_once "Article.php";
+require_once __DIR__."/../../../app/config/BddHandler.php";
+require_once __DIR__."/../Entity/Article.php";
 
 class ArticleRepository
 {
