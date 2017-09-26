@@ -3,13 +3,20 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Tuto Blog</title>
-		<link rel="stylesheet" type="text/css" href="reset.css">
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 
 	<body>
 
 		<div class="wrapper">
+			<nav class="arrows-enabled">
+				<ul>
+					<li><a href="/">Accueil</a></li>
+					<li><a href="/admin">Admin</a></li>
+				</ul>
+			</nav>
+			
 			<div class="articles-list">
 				<?php foreach ($articles as $article) : ?>
 				<article>
@@ -24,5 +31,7 @@
 			<?php endforeach; ?>
 			</div>
 		</div>
+
+		<script type="text/javascript" src="/js/app.js">al</script>
 	</body>
 </html>

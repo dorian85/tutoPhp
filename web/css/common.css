@@ -1,0 +1,17 @@
+body {
+	min-width: 450px;
+	max-width: 980px;
+	margin: 0 auto;
+	font-family: Calibri, sans-serif;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+a {
+	text-decoration: none;
+	outline-style: none;
+	color: inherit;
+}

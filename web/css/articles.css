@@ -1,0 +1,22 @@
+.articles-list {
+	padding: 10px;
+	padding-top: 60px;	
+}
+
+.articles-list h1 {
+	font-size: 1.3em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.articles-list .meta-data {
+	color: #666;
+	font-size: 0.7em;
+	font-weight: bold;
+	text-align: center;
+	padding: 15px;
+}
+
+.articles-list p {
+	padding: 15px;
+}

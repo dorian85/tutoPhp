@@ -35,6 +35,3 @@ class BddHandler {
 		return self::$_bdd;
 	}
 }
-
-
-
