@@ -8,7 +8,6 @@
 	</head>
 
 	<body>
-
 		<div class="wrapper">
 			<nav class="arrows-enabled">
 				<ul>
@@ -32,6 +31,6 @@
 			</div>
 		</div>
 
-		<script type="text/javascript" src="/js/app.js">al</script>
+		<script type="text/javascript" src="/js/app.js"></script>
 	</body>
 </html>

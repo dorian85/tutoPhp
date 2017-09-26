@@ -2,11 +2,12 @@
 
 require_once __DIR__."/../vendor/autoload.php";
 
+require_once __DIR__."/../app/config/router.php";
 require_once __DIR__."/../src/Blog/Repository/ArticleRepository.php";
 
 $articles = (new ArticleRepository())->findAll();
 
-require_once __DIR__."/../src/Blog/Resources/views/home.php";
+require_once $view;
 
 
 /*
